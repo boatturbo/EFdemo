@@ -61,5 +61,13 @@ namespace ApiTest.Controllers
         public void Delete(int id)
         {
         }
+
+        [Route("GetUserCreateTimeById")]
+        public string GetUserCreateTimeById()
+        {
+            var adminModel = _unitOfWork.SysUserRepository.Get("admin");
+            return adminModel.CreateTime.ToString();
+        }
+
     }
 }
