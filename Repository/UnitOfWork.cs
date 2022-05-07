@@ -22,10 +22,12 @@ namespace Repository
 
         #region 字段
         private SysUserRepository _SysUserRepository = null;
+        private ManualRepository _manualRepository = null;
         #endregion
 
         #region 操作类属性
         public SysUserRepository SysUserRepository => _SysUserRepository ?? (_SysUserRepository = new SysUserRepository(DbContext));
+        public ManualRepository manualRepository => _manualRepository ?? (_manualRepository = new ManualRepository(DbContext));
         #endregion
 
         #region 仓储操作（提交事务保存SaveChanges(),回滚RollBackChanges(),释放资源Dispose()）

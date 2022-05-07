@@ -15,6 +15,7 @@ namespace Entity
 
         #region 表对象
         public virtual DbSet<SysUser> SysUsers { get; set; }
+        public virtual DbSet<Manual> Manual { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
